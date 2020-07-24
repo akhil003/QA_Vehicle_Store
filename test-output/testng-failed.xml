@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Time test Suite]">
+  <test thread-count="5" name="Group Test(failed)">
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.qa.test.VehicleJunit">
+      <class name="com.qa.test.Testing">
         <methods>
           <include name="verifyVehicleListOfValues"/>
+          <include name="verifySubmitButton"/>
         </methods>
-      </class> <!-- com.qa.test.VehicleJunit -->
+      </class> <!-- com.qa.test.Testing -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Group Test(failed) -->
+</suite> <!-- Failed suite [Time test Suite] -->
